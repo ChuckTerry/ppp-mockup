@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paycheck Protection Program | U.S. Small Business Administration</title>
+    <style>
+      body {
+        font-family: "Source Sans Pro Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        color: rgb(0, 46, 109);
+      }
+
+      nav>ul>li {
+        display: inline-block;
+
+        >button {
+          color: rgb(27, 30, 41);
+          border: none;
+          background-color: rgb(255, 255, 255);
+
+          &::after {
+            content: " \25BD";
+          }
+        }
+      }
+
+      .breadcrumb {
+        padding: 10px;
+
+        li:not(:last-child)::after {
+          display: inline-block;
+          margin: 0 0.25rem;
+          content: ">";
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          align-items: end;
+        }
+      }
+
+      .extra-links li:not(:last-child)::after {
+        display: inline-block;
+        margin: 0 0.25rem;
+        content: " | ";
+      }
+
+      .footer-nav>div {
+        display: inline-block;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .cards {
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 5px;
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+          color: white;
+          text-decoration: none;
+          font-size: 12pt;
+        }
+
+        button {
+          width: 95%;
+          margin: 2px 10px;
+          border: none;
+          padding: 6px;
+          text-align: center;
+          background-color: rgb(0, 125, 188);
+          color: rgb(255, 255, 255);
+          position: absolute;
+          bottom: 10px;
+        }
+
+        li {
+          padding: 20px;
+          margin: 10px;
+          border: 1px solid rgb(0, 0, 0);
+          border-radius: 20px;
+
+          div {
+            height: 180px;
+            position: relative;
+          }
+        }
+      }
+
+      .banner {
+        background-color: #e7f6f8;
+        padding: 20px;
+        margin-bottom: 16px;
+      }
+
+      .top-nav {
+        padding: 4px;
+        width: 100%;
+        border-top: 2px solid lightgray;
+        border-bottom: 2px solid lightgray;
+
+        .nav-dropdown+div {
+          display: none;
+          padding: 12px;
+
+          &.show {
+            display: block;
+            position: absolute;
+            color: white !important;
+            background-color: darkblue;
+            width: 100%;
+            left: 0;
+            z-index: 1000;
+          }
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+          color: white;
+          text-decoration: none;
+          font-size: 12pt;
+        }
+
+        ul {
+          list-style-type: none;
+        }
+
+        >ul>li {
+          >button {
+            color: rgb(27, 30, 41);
+            border: none;
+            background-color: white;
+            font-size: 14pt;
+            font-weight: bold;
+
+            &::after {
+              content: " \25BD";
+              font-size: 9pt;
+              position: relative;
+              bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .pad-center {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+
+      form.search input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 70%;
+        background: white;
+      }
+
+      form.search button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: rgb(0, 125, 188);
+        color: white;
+        font-size: 15px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+
+      form.search button:hover {
+        background: rgb(0, 65, 126);
+      }
+
+      form.search::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .right-side-content {
+        float: right;
+        text-align: right;
+      }
+
+      .top-most {
+        margin: 2px;
+        padding: 2px;
+        font-size: 11px;
+      }
+
+      nav>ul>li>div>div>ul>li>a {
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      function closeAllDropdowns(exclude) {
+        document.querySelectorAll('.nav-dropdown').forEach((element) => {
+          const target = element.nextElementSibling;
+          if (target.classList.contains('show') && target !== exclude) {
+            target.classList.remove('show');
+          }
+        });
+      }
+
+      function navDropdown(element) {
+        const target = element.nextElementSibling;
+        closeAllDropdowns(target);
+        target.classList.toggle('show');
+      }
+      window.onclick = function() {
+        if (!event.target.matches('.nav-dropdown')) {
+          closeAllDropdowns();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <header class="pad-center top-most">
+        <p> 🇺🇸 An official website of the United States government <a>Here’s how you know</a>
+        </p>
+      </header>
+      <header>
+        <section class="banner pad-center">
+          <h3>Hurricanes Helene and Milton</h3>
+          <p>Need help? <a href="#">Learn about SBA disaster assistance.</a>
+          </p>
+        </section>
+        <div class="pad-center right-side-content">
+          <button href="#">Español</button>
+          <nav class="extra-links">
+            <ul>
+              <li>
+                <a href="#"> For Partners </a>
+              </li>
+              <li>
+                <a href="#"> Newsroom </a>
+              </li>
+              <li>
+                <a href="#"> Contact us </a>
+              </li>
+              <li>
+                <a href="#"> Other languages </a>
+              </li>
+            </ul>
+          </nav>
+          <section>
+            <form class="search" style="margin-left: auto; max-width: 300px;">
+              <input type="text" name="searchbox">
+              <button type="submit">&#x1F50D;</button>
+            </form>
+          </section>
+        </div>
+        <div style="clear: both;">
+          <div class="pad-center">
+            <a href="#">U.S. Small Business Administration Home</a>
+          </div>
+        </div>
+    </div>
+    <nav class="top-nav pad-center">
+      <ul>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">Business Guide</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Explore our business guide</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">10 steps to start your business</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Plan your business</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Market research and competitive analysis</a>
+                    </li>
+                    <li>
+                      <a href="#">Write your business plan</a>
+                    </li>
+                    <li>
+                      <a href="#">Calculate your startup costs</a>
+                    </li>
+                    <li>
+                      <a href="#">Establish business credit</a>
+                    </li>
+                    <li>
+                      <a href="#">Fund your business</a>
+                    </li>
+                    <li>
+                      <a href="#">Buy an existing business or franchise</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Launch your business</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Pick your business location</a>
+                    </li>
+                    <li>
+                      <a href="#">Choose a business structure</a>
+                    </li>
+                    <li>
+                      <a href="#">Choose your business name</a>
+                    </li>
+                    <li>
+                      <a href="#">Register your business</a>
+                    </li>
+                    <li>
+                      <a href="#">Get federal and state tax ID numbers</a>
+                    </li>
+                    <li>
+                      <a href="#">Apply for licenses and permits</a>
+                    </li>
+                    <li>
+                      <a href="#">Open a business bank account</a>
+                    </li>
+                    <li>
+                      <a href="#">Get business insurance</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Manage your business</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Manage your finances</a>
+                    </li>
+                    <li>
+                      <a href="#">Hire and manage employees</a>
+                    </li>
+                    <li>
+                      <a href="#">Pay taxes</a>
+                    </li>
+                    <li>
+                      <a href="#">Stay legally compliant</a>
+                    </li>
+                    <li>
+                      <a href="#">Buy assets and equipment</a>
+                    </li>
+                    <li>
+                      <a href="#">Marketing and sales</a>
+                    </li>
+                    <li>
+                      <a href="#">AI for small business</a>
+                    </li>
+                    <li>
+                      <a href="#">Strengthen your cybersecurity</a>
+                    </li>
+                    <li>
+                      <a href="#">Prepare for emergencies</a>
+                    </li>
+                    <li>
+                      <a href="#">Recover from disasters</a>
+                    </li>
+                    <li>
+                      <a href="#">Close or sell your business</a>
+                    </li>
+                    <li>
+                      <a href="#">Hire employees with disabilities</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Grow your business</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Get more funding</a>
+                    </li>
+                    <li>
+                      <a href="#">Expand to new locations</a>
+                    </li>
+                    <li>
+                      <a href="#">Merge and acquire businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Become a federal contractor</a>
+                    </li>
+                    <li>
+                      <a href="#">Export products</a>
+                    </li>
+                    <li>
+                      <a href="#">Women-owned businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Native American-owned businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Veteran-owned businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Military spouse businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">LGBTQ-owned businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Rural businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Minority-owned businesses</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">Funding Programs</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Find funding programs</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Loans</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Make a payment to SBA</a>
+                    </li>
+                    <li>
+                      <a href="#">7(a) loans</a>
+                    </li>
+                    <li>
+                      <a href="#">504 loans</a>
+                    </li>
+                    <li>
+                      <a href="#">Microloans</a>
+                    </li>
+                    <li>
+                      <a href="#">Lender Match</a>
+                    </li>
+                    <li>
+                      <a href="#">COVID-19 relief options</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Investment capital</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">SBIC directory</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Disaster assistance</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Physical damage loans</a>
+                    </li>
+                    <li>
+                      <a href="#">Mitigation assistance</a>
+                    </li>
+                    <li>
+                      <a href="#">Economic Injury Disaster Loans</a>
+                    </li>
+                    <li>
+                      <a href="#">Military reservist loan</a>
+                    </li>
+                    <li>
+                      <a href="#">Hurricane Helene</a>
+                    </li>
+                    <li>
+                      <a href="#">Hurricane Milton</a>
+                    </li>
+                    <li>
+                      <a href="#">Recovery Center locations</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Surety bonds</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Surety bond agency directory</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Grants</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">State Trade Expansion Program (STEP)</a>
+                    </li>
+                    <li>
+                      <a href="#">Grants for community organizations</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">Federal Contracting</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Learn about federal contracting</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Contracting guide</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Assess your business</a>
+                    </li>
+                    <li>
+                      <a href="#">Basic requirements</a>
+                    </li>
+                    <li>
+                      <a href="#">How to win contracts</a>
+                    </li>
+                    <li>
+                      <a href="#">Types of contracts</a>
+                    </li>
+                    <li>
+                      <a href="#">Size standards</a>
+                    </li>
+                    <li>
+                      <a href="#">Governing rules and responsibilities</a>
+                    </li>
+                    <li>
+                      <a href="#">Prime and subcontracting</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Contracting assistance programs</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Small Disadvantaged Business</a>
+                    </li>
+                    <li>
+                      <a href="#">Women-Owned Small Business Federal Contract program</a>
+                    </li>
+                    <li>
+                      <a href="#">Veteran contracting assistance programs</a>
+                    </li>
+                    <li>
+                      <a href="#">8(a) Business Development program</a>
+                    </li>
+                    <li>
+                      <a href="#">SBA Mentor-Protégé program</a>
+                    </li>
+                    <li>
+                      <a href="#">Joint ventures</a>
+                    </li>
+                    <li>
+                      <a href="#">HUBZone program</a>
+                    </li>
+                    <li>
+                      <a href="#">Natural Resource Sales Assistance program</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Counseling and help</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Contracting area directors</a>
+                    </li>
+                    <li>
+                      <a href="#">Procurement Center Representative directory</a>
+                    </li>
+                    <li>
+                      <a href="#">Commercial Market Representatives</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Contracting data</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Small business procurement scorecard</a>
+                    </li>
+                    <li>
+                      <a href="#">Disaggregated data</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">Learning Platform</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Explore our learning platform</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">MySBA Learning</a>
+                </li>
+                <li>
+                  <a href="#">Boots to Business</a>
+                </li>
+                <li>
+                  <a href="#">T.H.R.I.V.E. Emerging Leaders</a>
+                </li>
+                <li>
+                  <a href="#">Empower to Grow</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Investing in America</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Home repair and construction</a>
+                    </li>
+                    <li>
+                      <a href="#">Government contracting and sub-contracting</a>
+                    </li>
+                    <li>
+                      <a href="#">Manufacturing</a>
+                    </li>
+                    <li>
+                      <a href="#">Rural and agricultural small businesses</a>
+                    </li>
+                    <li>
+                      <a href="#">Investing in America featured stories</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">Local Assistance</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Find resources in your area</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Resource Partners</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Small Business Development Centers (SBDC)</a>
+                    </li>
+                    <li>
+                      <a href="#">SCORE Business Mentoring</a>
+                    </li>
+                    <li>
+                      <a href="#">Veterans Business Outreach Center (VBOC) program</a>
+                    </li>
+                    <li>
+                      <a href="#">Women&#039;s Business Centers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Export and trade assistance</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Export Finance Managers</a>
+                    </li>
+                    <li>
+                      <a href="#">U.S. Export Assistance Centers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Federal contracting assistance</a>
+                </li>
+                <li>
+                  <a href="#">Regional Innovation Clusters</a>
+                </li>
+                <li>
+                  <a href="#">Veterans Business Development Officers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button onclick="navDropdown(this)" class="nav-dropdown">About SBA</button>
+          <div>
+            <div>
+              <div>
+                <a href="#">
+                  <span>Learn about SBA</span>
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>SBA locations</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Headquarters Offices</a>
+                    </li>
+                    <li>
+                      <a href="#">Disaster Offices</a>
+                    </li>
+                    <li>
+                      <a href="#">District Offices</a>
+                    </li>
+                    <li>
+                      <a href="#">Loan and Guaranty Centers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Open government</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">FOIA</a>
+                    </li>
+                    <li>
+                      <a href="#">Digital SBA</a>
+                    </li>
+                    <li>
+                      <a href="#">About the SBA.gov website</a>
+                    </li>
+                    <li>
+                      <a href="#">SBA privacy program</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy Act request guide</a>
+                    </li>
+                    <li>
+                      <a href="#">Information quality</a>
+                    </li>
+                    <li>
+                      <a href="#">SBA guidance</a>
+                    </li>
+                    <li>
+                      <a href="#">AI inventory</a>
+                    </li>
+                    <li>
+                      <a href="#">Made in America waivers</a>
+                    </li>
+                    <li>
+                      <a href="#">SMS terms and conditions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">SBA Newsroom</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Work for SBA</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Employee life</a>
+                    </li>
+                    <li>
+                      <a href="#">Jobs at SBA</a>
+                    </li>
+                    <li>
+                      <a href="#">Contracting for SBA</a>
+                    </li>
+                    <li>
+                      <a href="#">Disaster response jobs at SBA</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Organization</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">SBA leadership</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact SBA</a>
+                    </li>
+                    <li>
+                      <a href="#">SBA initiatives</a>
+                    </li>
+                    <li>
+                      <a href="#">Forms and documents</a>
+                    </li>
+                    <li>
+                      <a href="#">Observances</a>
+                    </li>
+                    <li>
+                      <a href="#">Performance</a>
+                    </li>
+                    <li>
+                      <a href="#">Federal advisory committees</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Oversight and advocacy</span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#">Office of Hearings and Appeals</a>
+                    </li>
+                    <li>
+                      <a href="#">Office of Inspector General</a>
+                    </li>
+                    <li>
+                      <a href="#">Office of the National Ombudsman</a>
+                    </li>
+                    <li>
+                      <a href="#">Office of Advocacy</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Information in other languages</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+      <div>
+        <nav class="breadcrumb pad-center">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Funding Programs</a>
+            </li>
+            <li>
+              <a href="#">Loans</a>
+            </li>
+            <li>
+              <a href="#">COVID-19 relief options</a>
+            </li>
+            <li>Paycheck Protection Program</li>
+          </ul>
+        </nav>
+        <div>
+          <div class="pad-center">
+            <div>
+              <div class="center">
+                <h1>Paycheck Protection Program</h1>
+                <p>Get information about the SBA loan program that helped businesses keep their workforce employed during the COVID-19 crisis.</p>
+              </div>
+            </div>
+            <div>
+              <div class="pad-center">
+                <h2>Notice: The&nbsp;Paycheck Protection Program (PPP) ended on May 31, 2021. Existing borrowers may be eligible for <a href="#">PPP loan forgiveness.</a>
+                </h2>
+              </div>
+            </div>
+            <section>
+              <ul class="cards">
+                <li>
+                  <div>
+                    <header>
+                      <h3>PPP loan forgiveness </h3>
+                    </header>
+                    <div> Borrowers may be eligible for Paycheck Protection Program (PPP) loan forgiveness. </div>
+                    <button>
+                      <a href="#">Learn more about PPP loan forgiveness </a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <header>
+                      <h3>PPP lender information </h3>
+                    </header>
+                    <div> Information and resources for lenders participating in the Paycheck Protection Program (PPP). </div>
+                    <button>
+                      <a href="#">Get information for PPP lenders</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <header>
+                      <h3>PPP data </h3>
+                    </header>
+                    <div> SBA maintains access to data for all its current and past COVID-19 relief programs, including the Paycheck Protection Program (PPP). </div>
+                    <button>
+                      <a href="#">Download PPP reports</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <header>
+                      <h3>First Draw PPP loan </h3>
+                    </header>
+                    <div> If you did not receive a Paycheck Protection Program (PPP) loan before, First Draw PPP loans may have been available to you. </div>
+                    <button>
+                      <a href="#">Read about First Draw PPP loans</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <header>
+                      <h3>Second Draw PPP loan </h3>
+                    </header>
+                    <div> If you previously received a Paycheck Protection Program (PPP) loan, certain businesses were eligible for a Second Draw PPP loan. </div>
+                    <button>
+                      <a href="#">Read about Second Draw PPP loans</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <header>
+                      <h3>Get help with your PPP loan </h3>
+                    </header>
+                    <div> SBA offers free counseling and training events to help you with the Paycheck Protection Program (PPP). </div>
+                    <button>
+                      <a href="#">Get help with a PPP loan </a>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <footer class="pad-center"> Short URL: sba.gov/ppp </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="pad-center" style="margin-top:60px;">
+        <a href="#">Return to top</a>
+      </div>
+      <div>
+        <div style="float: right;">
+          <div>
+            <h3>Sign up</h3>
+            <p>Receive information about upcoming SBA events, news alerts, and program updates.</p>
+            <p>
+              <span style="color: red;">*</span> indicates a required field
+            </p>
+            <div novalidate="novalidate">
+              <form>
+                <div>
+                  <label for="email">Email <span style="color: red;">*</span>
+                  </label>
+                  <input type="email" name="email" value="" size="30" />
+                </div>
+                <div>
+                  <label for="zipcode">ZIP Code</label>
+                  <input type="text" name="zipcode" value="" size="5" maxlength="5" />
+                </div>
+              </form>
+            </div>
+            <p> Your information will only be used in accordance with our <a href="#">website privacy policy</a>. </p>
+          </div>
+        </div>
+        <div>
+          <nav class="footer-nav pad-center">
+            <div>
+              <section>
+                <div>About SBA</div>
+                <ul>
+                  <li>
+                    <a href="#">Contact SBA</a>
+                  </li>
+                  <li>
+                    <a href="#">Locations</a>
+                  </li>
+                  <li>
+                    <a href="#">Upcoming events</a>
+                  </li>
+                  <li>
+                    <a href="#">Newsroom</a>
+                  </li>
+                  <li>
+                    <a href="#">SBA blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Leadership team</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div>
+              <section>
+                <div>About the site</div>
+                <ul>
+                  <li>
+                    <a href="#">Site map</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Linking policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Plain language</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessibility</a>
+                  </li>
+                  <li>
+                    <a href="#">Disclaimers</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div>
+              <section>
+                <div>Open government</div>
+                <ul>
+                  <li>
+                    <a href="#">Freedom of Information Act</a>
+                  </li>
+                  <li>
+                    <a href="#">No Fear Act</a>
+                  </li>
+                  <li>
+                    <a href="#">Open data sources</a>
+                  </li>
+                  <li>
+                    <a href="#">Policies and guidance</a>
+                  </li>
+                  <li>
+                    <a href="#">Budget and performance</a>
+                  </li>
+                  <li>
+                    <a href="#">Regulations.gov</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div>
+              <section>
+                <div>Oversight</div>
+                <ul>
+                  <li>
+                    <a href="#">Inspector General</a>
+                  </li>
+                  <li>
+                    <a href="#">Advocacy</a>
+                  </li>
+                  <li>
+                    <a href="#">Hearings and appeals</a>
+                  </li>
+                  <li>
+                    <a href="#">Ombudsman</a>
+                  </li>
+                  <li>
+                    <a href="#">Fraud and identity theft</a>
+                  </li>
+                  <li>
+                    <a href="#">WhiteHouse.gov</a>
+                  </li>
+                  <li>
+                    <a href="#">USA.gov</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div style="clear:both;" class="pad-center">
+        <address>
+          <p>
+            <strong>U.S. Small Business Administration</strong>
+            <br>409 3rd St., SW <br>Washington, DC 20416 <br>
+            <a href="#">800-827-5722</a>
+          </p>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
